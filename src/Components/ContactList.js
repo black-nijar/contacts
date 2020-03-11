@@ -5,7 +5,7 @@ import { deleteContact, editContact } from "../actions/actions";
 const ContactList = props => {
   const { contact } = props;
   return (
-    <div className="container">
+    <div className="container" style={{ paddingTop: 10 }}>
       <div className="card" style={{ padding: 10 }}>
         <h4>Contact List</h4>
         <h5>Name: {contact.name}</h5>
@@ -17,7 +17,7 @@ const ContactList = props => {
               className="btn btn-info"
               onClick={() => props.editContact(contact.id)}
             >
-             <i></i>
+             <i className='material-icons'>edit</i>
             </button>
           </div>
           <div>
@@ -25,7 +25,7 @@ const ContactList = props => {
               className="btn btn-danger"
               onClick={() => props.deleteContact(contact.id)}
             >
-              Delete
+              <i className='material-icons'>delete</i>
             </button>
           </div>
         </div>
