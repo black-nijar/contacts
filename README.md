@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Clone this repository and npm install & npm start
+# Features
+ ADD CONTACT
+ DELETE CONTACT
+ EDIT CONTACT
+ UPDATE CONTACT
 ## Available Scripts
 
 In the project directory, you can run:
