@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './App.css';
+import ContactForm from './Components/ContactForm';
+import List from './Components/List';
 
 const App = () => {
   return (
     <div>
-      <h2>Welcome</h2>
+     <ContactForm/>
+     <List/>
     </div>
   )
 }
