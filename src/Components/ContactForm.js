@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { createContact } from "../actions/actions";
 
 class ContactForm extends Component {
-
   // handle Submit
   handleSubmit = e => {
     e.preventDefault();
@@ -18,51 +17,51 @@ class ContactForm extends Component {
       isEdit: false
     };
     this.props.createContact(data);
-    this.getEmail.value = '';
-    this.getName.value = '';
-    this.getPhoneNumber.value = '';
+    this.getEmail.value = "";
+    this.getName.value = "";
+    this.getPhoneNumber.value = "";
   };
-  render () {
-  return (
-    <div>
-      <h2 className="welcome">Welcome</h2>
-      <form className="form" onSubmit={this.handleSubmit}>
-        <div className="form-group">
-          <label>Enter Name :</label>
-          <input
-            className="form-control"
-            type="text"
-            placeholder="Enter Name"
-            ref={(input) => this.getName = input}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Enter Email Id :</label>
-          <input
-            className="form-control"
-            type="email"
-            placeholder="Enter Email"
-            ref={(input) => this.getEmail = input}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>Enter phone number :</label>
-          <input
-            className="form-control"
-            type="number"
-            placeholder="Enter Phone Number"
-            ref={(input) => this.getPhoneNumber = input}
-            required
-          />
-        </div>
-        <button className="btn btn-primary">Add Contact</button>
-      </form>
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        <h2 className="welcome">Welcome</h2>
+        <form className="form" onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <label>Enter Name :</label>
+            <input
+              className="form-control"
+              type="text"
+              placeholder="Enter Name"
+              ref={input => (this.getName = input)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Enter Email Id :</label>
+            <input
+              className="form-control"
+              type="email"
+              placeholder="Enter Email"
+              ref={input => (this.getEmail = input)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Enter phone number :</label>
+            <input
+              className="form-control"
+              type="number"
+              placeholder="Enter Phone Number"
+              ref={input => (this.getPhoneNumber = input)}
+              required
+            />
+          </div>
+          <button className="btn btn-primary">Add Contact</button>
+        </form>
+      </div>
+    );
   }
-};
+}
 
 const mapStateToProps = state => {
   return {

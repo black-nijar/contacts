@@ -1,4 +1,4 @@
-import { CREATE_CONTACT, DELETE_CONTACT, EDIT_CONTACT } from "./types"
+import { CREATE_CONTACT, DELETE_CONTACT, EDIT_CONTACT, UPDATE_CONTACT } from "./types"
 
 // Create Contact
 export const createContact = data => {
@@ -21,5 +21,15 @@ export const editContact = id => {
   return {
     type: EDIT_CONTACT,
     id
+  }
+};
+
+
+//Update Contact
+export const updateContact = (id, contact) => {
+  return {
+    type: UPDATE_CONTACT,
+    id,
+    contact
   }
 };
